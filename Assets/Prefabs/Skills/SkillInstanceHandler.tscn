@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Scripts/Skills/SkillInstanceHandler.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Prefabs/Common/Cooldown.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Prefabs/Skills/Projectile.tscn" type="PackedScene" id=4]
+
+[node name="SkillInstanceHandler" type="Node2D"]
+script = ExtResource( 2 )
+skill_spawn_point = NodePath("../SkillSpawnPoint")
+skill = ExtResource( 4 )
+
+[node name="Cooldown" parent="." instance=ExtResource( 3 )]
+activeTime = 0.1
+cooldownTime = 0.1

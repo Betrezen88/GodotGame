@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Scripts/Staff.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Prefabs/Gem.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Prefabs/Skills/Projectile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Prefabs/Skills/Dash.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Prefabs/Skills/firebolt.tscn" type="PackedScene" id=5]
+
+[node name="Staff" type="Node2D"]
+script = ExtResource( 1 )
+gem_1_path = NodePath("Gem1")
+gem_2_path = NodePath("Gem2")
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="SkillSpawnPoint" type="Node2D" parent="."]
+position = Vector2( -3, -36 )
+
+[node name="Gem1" parent="." instance=ExtResource( 2 )]
+gem_name = "Gem 1"
+primary_scene = ExtResource( 3 )
+secondary_scene = ExtResource( 5 )
+spawn_point_path = NodePath("../SkillSpawnPoint")
+
+[node name="Gem2" parent="." instance=ExtResource( 2 )]
+gem_name = "Gem 2"
+primary_scene = ExtResource( 3 )
+secondary_scene = ExtResource( 5 )
+spawn_point_path = NodePath("../SkillSpawnPoint")
+
+[node name="Dash" parent="." instance=ExtResource( 4 )]

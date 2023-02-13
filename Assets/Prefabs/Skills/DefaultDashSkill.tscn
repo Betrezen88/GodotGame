@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Scripts/Skills/MovementSkill.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Scripts/Skills/SkillStats/MovementSkillStats.gd" type="Script" id=2]
+
+[node name="DashSkill" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Stats" type="Node2D" parent="."]
+script = ExtResource( 2 )
+activeTime = 0.2
+cooldownTime = 0.5
+speed = 1000.0
+
+[node name="ActiveTimer" type="Timer" parent="."]
+
+[node name="CooldownTimer" type="Timer" parent="."]

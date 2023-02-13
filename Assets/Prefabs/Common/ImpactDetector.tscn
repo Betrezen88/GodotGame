@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 13.0
+
+[node name="ImpactDetector" type="Area2D"]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 22, 0 )
+rotation = 1.5708
+shape = SubResource( 2 )
