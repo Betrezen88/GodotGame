@@ -5,6 +5,9 @@ export var player_stats_scene : NodePath
 export var staff_scene : NodePath
 
 onready var inputController = $InputController
+onready var health = $Health
+onready var stamina = $Stamina
+onready var staminaRestore = $StaminaRestor
 
 # private variables
 onready var player_stats = get_node(player_stats_scene)
@@ -25,6 +28,9 @@ func _ready():
 		inputController.connect("attack_2_secondary_pressed", staff, "gem_2_attack_secondary_pressed")
 		inputController.connect("attack_2_secondary_released", staff, "gem_2_attack_secondary_released")
 		inputController.connect("dash_pressed", staff, "on_dash_pressed")
+	health.connect("value_is_zero", self, "on_health_is_zero")
+	stamina.connect("value_is_zero", self, "on_stamina_is_zero")
+	staminaRestore.connect("restore", self, "on_stamina_restore")
 
 func _physics_process(_delta):
 	# Rotate player torward mouse cursor
@@ -35,3 +41,12 @@ func _physics_process(_delta):
 
 func set_current_speed(speed : float) -> void:
 	current_speed = player_stats.speed + speed
+
+func on_health_is_zero() -> void:
+	print("health is zero")
+	
+func on_stamina_restore(value) -> void:
+	print("stamina was restored by: ", value)
+
+func on_stamina_is_zero() -> void:
+	print("stamina is zero")
