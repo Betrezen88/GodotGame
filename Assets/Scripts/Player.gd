@@ -31,6 +31,8 @@ func _ready():
 	health.connect("value_is_zero", self, "on_health_is_zero")
 	stamina.connect("value_is_zero", self, "on_stamina_is_zero")
 	staminaRestore.connect("restore", stamina, "increase")
+	
+	set_stats()
 
 func _physics_process(_delta):
 	# Rotate player torward mouse cursor
@@ -47,3 +49,9 @@ func on_health_is_zero() -> void:
 
 func on_stamina_is_zero() -> void:
 	print("stamina is zero")
+
+func set_stats() -> void:
+	health.max_value = player_stats.health
+	stamina.max_value = player_stats.stamina
+	staminaRestore.value = player_stats.stamina_restore_value
+	staminaRestore.interval = player_stats.stamina_restore_interval
