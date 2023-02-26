@@ -30,7 +30,7 @@ func _ready():
 		inputController.connect("dash_pressed", staff, "on_dash_pressed")
 	health.connect("value_is_zero", self, "on_health_is_zero")
 	stamina.connect("value_is_zero", self, "on_stamina_is_zero")
-	staminaRestore.connect("restore", self, "on_stamina_restore")
+	staminaRestore.connect("restore", stamina, "increase")
 
 func _physics_process(_delta):
 	# Rotate player torward mouse cursor
@@ -44,9 +44,6 @@ func set_current_speed(speed : float) -> void:
 
 func on_health_is_zero() -> void:
 	print("health is zero")
-	
-func on_stamina_restore(value) -> void:
-	print("stamina was restored by: ", value)
 
 func on_stamina_is_zero() -> void:
 	print("stamina is zero")
