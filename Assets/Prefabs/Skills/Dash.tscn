@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Scripts/Skills/Dash.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Prefabs/Common/Cooldown.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Scripts/Cooldown.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Scripts/Common/Cooldown.gd" type="Script" id=3]
 
 [node name="Dash" type="Node2D"]
 script = ExtResource( 1 )

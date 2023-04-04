@@ -4,8 +4,8 @@
 [ext_resource path="res://Assets/Prefabs/Common/Range.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Prefabs/Common/HitBox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Prefabs/Common/ImpactDetector.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Scripts/Projectile.gd" type="Script" id=5]
-[ext_resource path="res://Assets/Prefabs/Skills/Chargeable.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Scripts/Skills/Projectile.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Scripts/Skills/Chargeable.gd" type="Script" id=6]
 
 [node name="firebolt" type="Node2D"]
 script = ExtResource( 5 )

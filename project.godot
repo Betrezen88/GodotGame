@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Area2D",
 "class": "HitBox",
 "language": "GDScript",
-"path": "res://Assets/Scripts/HitBox.gd"
+"path": "res://Assets/Scripts/Common/HitBox.gd"
 }, {
 "base": "Area2D",
 "class": "HurtBox",
 "language": "GDScript",
-"path": "res://Assets/Scripts/HurtBox.gd"
+"path": "res://Assets/Scripts/Common/HurtBox.gd"
 }, {
 "base": "SkillStats",
 "class": "MovementSkillStats",
@@ -27,7 +27,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Projectile",
 "language": "GDScript",
-"path": "res://Assets/Scripts/Projectile.gd"
+"path": "res://Assets/Scripts/Skills/Projectile.gd"
 }, {
 "base": "Node2D",
 "class": "Skill",

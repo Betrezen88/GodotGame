@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Scripts/StatusEffects/StatusEffect.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Scripts/StatusEffects/FreezeEffect.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Prefabs/StatusEffects/StatusEffect.tscn" type="PackedScene" id=3]
+
+[node name="FreezeEffect" type="Node"]
+script = ExtResource( 2 )
+frozen_time = 10.0
+
+[node name="FrozenTimer" type="Timer" parent="."]
+
+[node name="StatusEffect" type="Node" parent="." instance=ExtResource( 3 )]
+script = ExtResource( 1 )
+max_value = 100
+time = 1.0

@@ -32,7 +32,7 @@ func gem_1_attack_primary_released() -> void:
 	gem_1.attack_primary()
 
 func gem_1_attack_secondary_pressed() -> void:
-	if gem_1.is_primary_chargeable():
+	if gem_1.is_secondary_chargable():
 		print("gem 2 attack secondary is chargable")
 	#print("gem 1 attack secondary pressed")
 
@@ -50,7 +50,7 @@ func gem_2_attack_primary_released() -> void:
 	gem_2.attack_primary()
 
 func gem_2_attack_secondary_pressed() -> void:
-	if gem_2.is_primary_chargeable():
+	if gem_2.is_secondary_chargable():
 		print("gem 2 attack secondary is chargable")
 
 func gem_2_attack_secondary_released() -> void:

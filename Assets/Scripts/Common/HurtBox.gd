@@ -11,4 +11,7 @@ func _ready() ->void:
 	connect("area_entered", self, "_on_area_entered")
 
 func _on_area_entered(hitbox: HitBox) -> void:
+	if hitbox == null:
+		return
+	
 	emit_signal("damage_received", 10)

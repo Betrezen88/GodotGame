@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Sprites/SpriteFrames/Projectile.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Prefabs/Common/HitBox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Scripts/Projectile.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Scripts/Skills/Projectile.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Prefabs/Common/ImpactDetector.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Prefabs/Common/Range.tscn" type="PackedScene" id=6]
 

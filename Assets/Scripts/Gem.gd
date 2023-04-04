@@ -29,3 +29,8 @@ func is_primary_chargeable() -> bool:
 	if primary_scene.has_method("is_chargeable"):
 		return primary_scene.is_chargeable()
 	return false
+
+func is_secondary_chargable() -> bool:
+	if secondary_scene.has_method("is_chargeable"):
+		return secondary_scene.is_chargeable()
+	return false

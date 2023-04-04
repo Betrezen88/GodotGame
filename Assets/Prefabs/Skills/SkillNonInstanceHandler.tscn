@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Prefabs/Common/Cooldown.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Scripts/Skills/SkillNonInstanceHandler.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Scripts/Cooldown.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Scripts/Common/Cooldown.gd" type="Script" id=3]
 
 [node name="SkillNonInstanceHandler" type="Node2D"]
 script = ExtResource( 2 )

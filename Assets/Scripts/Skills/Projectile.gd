@@ -7,6 +7,9 @@ export(NodePath) var impact_detector_path
 export(NodePath) var range_component_path
 export(NodePath) var animated_sprite_path
 export(NodePath) var chargeable_path
+
+export var effects = []
+
 export var speed := 1000.0
 
 onready var hitbox = get_node(hitbox_path)
