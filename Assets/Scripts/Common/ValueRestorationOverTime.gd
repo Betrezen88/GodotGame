@@ -20,7 +20,6 @@ func on_timeout() -> void:
 	emit_signal("restore", value)
 
 func on_value_changed(_value) -> void:
-	print("on_value_changed: ", _value)
 	if valueComponent.is_full():
 		timer.stop()
 	else:
