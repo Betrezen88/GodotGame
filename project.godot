@@ -34,16 +34,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Assets/Scripts/Skills/Skill.gd"
 }, {
-"base": "Node2D",
-"class": "SkillInstanceHandler",
-"language": "GDScript",
-"path": "res://Assets/Scripts/Skills/SkillInstanceHandler.gd"
-}, {
-"base": "Node2D",
-"class": "SkillNonInstanceHandler",
-"language": "GDScript",
-"path": "res://Assets/Scripts/Skills/SkillNonInstanceHandler.gd"
-}, {
 "base": "Node",
 "class": "SkillStats",
 "language": "GDScript",
@@ -55,8 +45,6 @@ _global_script_class_icons={
 "MovementSkillStats": "",
 "Projectile": "",
 "Skill": "",
-"SkillInstanceHandler": "",
-"SkillNonInstanceHandler": "",
 "SkillStats": ""
 }
 
