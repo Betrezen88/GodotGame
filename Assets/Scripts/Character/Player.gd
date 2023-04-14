@@ -28,9 +28,8 @@ func _ready():
 		inputController.connect("attack_2_secondary_pressed", staff, "gem_2_attack_secondary_pressed")
 		inputController.connect("attack_2_secondary_released", staff, "gem_2_attack_secondary_released")
 		inputController.connect("dash_pressed", staff, "on_dash_pressed")
-	health.connect("value_is_zero", self, "on_health_is_zero")
-	stamina.connect("value_is_zero", self, "on_stamina_is_zero")
-	staminaRestore.connect("restore", stamina, "increase")
+	health.connect("value_is_min", self, "on_health_is_zero")
+	stamina.connect("value_is_min", self, "on_stamina_is_zero")
 	
 	set_stats()
 
@@ -38,7 +37,6 @@ func _physics_process(_delta):
 	# Rotate player torward mouse cursor
 	# look_at(get_global_mouse_position())
 	# Move player in given direction
-	#move_and_slide(get_directional_input().normalized() * current_speed)
 	move_and_slide(inputController.get_directional_input().normalized() * current_speed)
 
 func set_current_speed(speed : float) -> void:
@@ -51,7 +49,9 @@ func on_stamina_is_zero() -> void:
 	print("stamina is zero")
 
 func set_stats() -> void:
-	health.max_value = player_stats.health
-	stamina.max_value = player_stats.stamina
-	staminaRestore.value = player_stats.stamina_restore_value
+	health.max_value = 100
+	health.current = player_stats.health
+	stamina.max_value = 100
+	stamina.current = player_stats.stamina
+	staminaRestore.increaseBy = player_stats.stamina_restore_value
 	staminaRestore.interval = player_stats.stamina_restore_interval
